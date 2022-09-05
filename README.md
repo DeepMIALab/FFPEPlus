@@ -2,7 +2,7 @@
 
 # FFPE++: Improving the Quality of Formalin-Fixed Paraffin-Embedded Tissue Imaging via Contrastive Unpaired Image-to-Image Translation
 
-<img src="FFPE++_full_pipeline_JUNE(1).png" width="800px"/>
+<img src="./FFPE++_full_pipeline_JUNE (1).png" width="800px"/>
 
 ### [Paper](https://arxiv.org/abs/2107.11786v2) | [Brain GBM Dataset](https://portal.gdc.cancer.gov/projects/TCGA-GBM) | [Brain LGG Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LGG) | [Lung LUAD Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) |  [Lung LUSC Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) | [Pretrained Models](https://www.dropbox.com/sh/x7fvxx1fiohxwb4/AAAObJJTJpIHHi-s2UafrKeea?dl=0) | [WebSite](https://deepmia.boun.edu.tr/) 
 

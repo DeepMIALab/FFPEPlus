@@ -2,15 +2,10 @@
 
 # FFPE++: Improving the Quality of Formalin-Fixed Paraffin-Embedded Tissue Imaging via Contrastive Unpaired Image-to-Image Translation
 
-<img src="./FFPE++_full_pipeline_JUNE (1).png" width="800px"/>
+<img src="imgs/FFPE++_full_pipeline_JUNE (1).png" width="800px"/>
 
-### [Paper](https://arxiv.org/abs/2107.11786v2) | [Brain GBM Dataset](https://portal.gdc.cancer.gov/projects/TCGA-GBM) | [Brain LGG Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LGG) | [Lung LUAD Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) |  [Lung LUSC Dataset](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) | [Pretrained Models](https://www.dropbox.com/sh/x7fvxx1fiohxwb4/AAAObJJTJpIHHi-s2UafrKeea?dl=0) | [WebSite](https://deepmia.boun.edu.tr/) 
 
-In this work, we propose AI-FFPE pipeline which is optimized for histopathology images by driving the network attention specifically to the nuclei and tissue preperation protocols related deficiencies. Compared to [CycleGAN](https://github.com/junyanz/CycleGAN), our model training is faster and less memory-intensive.
-
-<br>
-<img src='imgs/frozgan_loss2.gif' align="right" width=960>
-<br>
+In this work, we introduce FFPE++ to improve the quality of FFPE tissue sections using an unpaired image-to-image translation technique that converts FFPE images with artifacts into high-quality FFPE images without the need for explicit image pairing and annotation.
 
 ## Example Results
 

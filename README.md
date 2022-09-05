@@ -38,8 +38,8 @@ cd FFPEPlus
 
 ### Training and Test
 
-- The slide identity numbers which were used in train, validation and test sets are given as .txt files in [docs/](https://github.com/DeepMIALab/AI-FFPE/tree/main/docs) for Ovary, Lung, and Thyroid dataset. To replicate the results, you may download [OV](https://portal.gdc.cancer.gov/projects/TCGA-OV)  project for Ovary, [LUAD](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) and [LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) projects for Lung , and [THCA](https://portal.gdc.cancer.gov/projects/TCGA-THCA) project for Thyroid from TCGA Data Portal and create a subset using these .txt files.
-- To extract the patches from WSIs and create PNG files, please follow the instructions given in [FFPEPlus/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section. 
+- To replicate the results, you may download [OV](https://portal.gdc.cancer.gov/projects/TCGA-OV)  project for Ovary, [LUAD](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) and [LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) projects for Lung, and [THCA](https://portal.gdc.cancer.gov/projects/TCGA-THCA) project for Thyroid from TCGA Data Portal and create a subset using these .txt files.
+- To extract the patches from WSIs and create PNG files, please follow the instructions given in [FFPEPlus/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section.
 
 The data used for training are expected to be organized as follows:
 ```bash
@@ -52,11 +52,11 @@ Data_Path                # DIR_TO_TRAIN_DATASET
  |      ├── 1.png     
  |      ├── ...
  |      └── m.png
- ├──  valA
+ ├──  testA
  |      ├── 1.png     
  |      ├── ...
  |      └── j.png
- └──  valB     
+ └──  testB     
         ├── 1.png     
         ├── ...
         └── k.png
@@ -83,26 +83,12 @@ The test results will be saved to a html file here: ``` ./results/${result_dir_n
 
 <img src="imgs/ablation.png" width="800px"/>
 
-### Apply a pre-trained AI-FFPE model and evaluate
-
-For reproducability, you can download the pretrained models for each algorithm [here.](https://www.dropbox.com/sh/x7fvxx1fiohxwb4/AAAObJJTJpIHHi-s2UafrKeea?dl=0)
 
 ## Reference
 
 If you find our work useful in your research or if you use parts of this code please consider citing our paper:
 
-```
-@misc{ozyoruk2021deep,
-      title={Deep Learning-based Frozen Section to FFPE Translation}, 
-      author={Kutsev Bengisu Ozyoruk and Sermet Can and Guliz Irem Gokceler and Kayhan Basak and Derya Demir and Gurdeniz Serin and Uguray Payam Hacisalihoglu and Berkan Darbaz and Ming Y. Lu and Tiffany Y. Chen and Drew F. K. Williamson and Funda Yilmaz and Faisal Mahmood and Mehmet Turan},
-      year={2021},
-      eprint={2107.11786},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
-}
-```
-
 
 
 ### Acknowledgments
-Our code is developed based on [CUT](https://github.com/taesungp/contrastive-unpaired-translation). We also thank [pytorch-fid](https://github.com/mseitzer/pytorch-fid) for FID computation, and [stylegan2-pytorch](https://github.com/rosinality/stylegan2-pytorch/) for the PyTorch implementation of StyleGAN2 used in our single-image translation setting.
+Our code is developed based on [CUT](https://github.com/taesungp/contrastive-unpaired-translation).

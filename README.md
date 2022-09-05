@@ -9,7 +9,7 @@ In this work, we introduce FFPE++ to improve the quality of FFPE tissue sections
 
 ## Example Results
 
-### Frozen to FFPE Translation in Brain Specimens
+### FFPE artifacts correction in Lung Specimens
 <img src="imgs/brain_gif.gif" width="800px"/>
 
 ### Frozen to FFPE Translation in Lung Specimens
@@ -26,8 +26,8 @@ In this work, we introduce FFPE++ to improve the quality of FFPE tissue sections
 
 - Clone this repo:
 ```bash
-git clone https://github.com/DeepMIALab/AI-FFPE
-cd AI-FFPE
+git clone https://github.com/DeepMIALab/FFPEPlus
+cd FFPEPlus
 ```
 
 - Install PyTorch 1.1 and other dependencies (e.g., torchvision, visdom, dominate, gputil).
@@ -38,8 +38,8 @@ cd AI-FFPE
 
 ### Training and Test
 
-- The slide identity numbers which were used in train, validation and test sets are given as .txt files in [docs/](https://github.com/DeepMIALab/AI-FFPE/tree/main/docs) for both Brain and Lung dataset. To replicate the results, you may download [GBM](https://portal.gdc.cancer.gov/projects/TCGA-GBM) and [LGG](https://portal.gdc.cancer.gov/projects/TCGA-LGG) projects for Brain, [LUAD](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) and [LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) projects for Lung from TCGA Data Portal and create a subset using these .txt files.
-- To extract the patches from WSIs and create PNG files, please follow the instructions given in [AI-FFPE/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section. 
+- The slide identity numbers which were used in train, validation and test sets are given as .txt files in [docs/](https://github.com/DeepMIALab/AI-FFPE/tree/main/docs) for Ovary, Lung, and Thyroid dataset. To replicate the results, you may download [OV](https://portal.gdc.cancer.gov/projects/TCGA-OV)  project for Ovary, [LUAD](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) and [LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) projects for Lung , and [THCA](https://portal.gdc.cancer.gov/projects/TCGA-THCA) project for Thyroid from TCGA Data Portal and create a subset using these .txt files.
+- To extract the patches from WSIs and create PNG files, please follow the instructions given in [FFPEPlus/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section. 
 
 The data used for training are expected to be organized as follows:
 ```bash
@@ -65,12 +65,12 @@ Data_Path                # DIR_TO_TRAIN_DATASET
 
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 
-- Train the AI-FFPE model:
+- Train the FFPE++ model:
 ```bash
 python train.py --dataroot ./datasets/Frozen/${dataroot_train_dir_name} --name ${model_results_dir_name} --CUT_mode CUT --batch_size 1
 ```
 
-- Test the AI-FFPE  model:
+- Test the FFPE++ model:
 ```bash
 python test.py --dataroot ./datasets/Frozen/${dataroot_test_dir_name}  --name ${result_dir_name} --CUT_mode CUT --phase test --epoch ${epoch_number} --num_test ${number_of_test_images}
 ```

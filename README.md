@@ -26,8 +26,8 @@ In this work, we introduce FFPE++ to improve the quality of FFPE tissue sections
 
 - Clone this repo:
 ```bash
-git clone https://github.com/DeepMIALab/FFPEPlus
-cd FFPEPlus
+git clone https://github.com/DeepMIALab/FFPE-plus-plus
+cd FFPE-plus-plus
 ```
 
 - Install PyTorch 1.1 and other dependencies (e.g., torchvision, visdom, dominate, gputil).
@@ -39,7 +39,7 @@ cd FFPEPlus
 ### Training and Test
 
 - To replicate the results, you may download [OV](https://portal.gdc.cancer.gov/projects/TCGA-OV)  project for Ovary, [LUAD](https://portal.gdc.cancer.gov/projects/TCGA-LUAD) and [LUSC](https://portal.gdc.cancer.gov/projects/TCGA-LUSC) projects for Lung, and [THCA](https://portal.gdc.cancer.gov/projects/TCGA-THCA) project for Thyroid from TCGA Data Portal and create a subset using these .txt files.
-- To extract the patches from WSIs and create PNG files, please follow the instructions given in [FFPEPlus/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section.
+- To extract the patches from WSIs and create PNG files, please follow the instructions given in [FFPE-plus-plus/Data_preprocess](https://github.com/DeepMIALab/AI-FFPE/tree/main/Data_preprocess) section.
 
 The data used for training are expected to be organized as follows:
 ```bash

@@ -1,6 +1,6 @@
 
 
-# Deep Learning-based Frozen Section to FFPE Translation
+# FFPE++: Improving the Quality of Formalin-Fixed Paraffin-Embedded Tissue Imaging via Contrastive Unpaired Image-to-Image Translation
 
 <img src="imgs/overview.jpeg" width="800px"/>
 
